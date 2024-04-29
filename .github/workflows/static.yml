@@ -36,7 +36,7 @@ jobs:
       - name: Copy to preivew
         run: |
           mkdir preview
-          cp -r ./ ./preview
+          cp  ./index.html ./preview/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

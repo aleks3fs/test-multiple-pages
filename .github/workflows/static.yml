@@ -33,6 +33,13 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Cache other branches
+        uses: actions/cache@v3
+        with:
+          key: deploy-cache
+          path: |
+            ./main
+            ./preview
       - name: Copy to preivew
         run: |
           mkdir preview

@@ -26,7 +26,7 @@ jobs:
   deploy:
     environment:
       name: preview
-      url: https://aleks3fs.github.io/test-multiple-pages-preview/
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
